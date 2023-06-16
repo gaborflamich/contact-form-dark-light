@@ -1,0 +1,24 @@
+@use '../abstracts/mixins' as *;
+
+// Global icons
+*[class*='icon-'] {
+  &.address {
+    @include icon('icon-address.svg');
+  }
+  &.envelope {
+    @include icon('icon-envelope.svg');
+  }
+  &.inbox {
+    @include icon('icon-inbox.svg');
+  }
+  &.moon {
+    @include icon('icon-moon.svg');
+  }
+  &.paperclip {
+    @include icon('icon-paperclip.svg');
+  }
+  &.sun {
+    @include icon('icon-sun.svg');
+  }
+
+}
