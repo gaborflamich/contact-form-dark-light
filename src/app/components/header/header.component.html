@@ -1,0 +1,26 @@
+<div class="background"></div>
+<header class="header">
+  <div class="container">
+    <nav class="nav">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-images">
+          <i
+            class="logo"
+            [class.logo-light]="isDark"
+            [class.logo-dark]="!isDark"
+          ></i>
+        </div>
+      </a>
+      <a href="#" class="nav-link">Home</a>
+      <a href="#" class="nav-link">Join</a>
+      <span class="nav-link theme-toggle">
+        <i
+          (click)="toggle()"
+          [class.icon-moon]="isDark"
+          [class.icon-sun]="!isDark"
+        >
+        </i>
+      </span>
+    </nav>
+  </div>
+</header>

@@ -1,0 +1,162 @@
+// @use 'variables' as *;
+// TODO fix variable override -> if this is missing, the mixin breaks - if present, there's no way to override the vars
+
+@mixin export-vars() {
+  /**
+   * @tokens Component values
+   */
+  --mtvaui-carousel-top-margin-desktop: 140px;
+  --mtvaui-carousel-top-margin-mobile: 90px;
+
+  /**
+  * @tokens Fonts
+  * @presenter FontFamily
+  */
+
+  --mtvaui-font-primary: #{$font-primary};
+  --mtvaui-font-secondary: #{$font-secondary};
+
+  /**
+  * @tokens Common Colors
+  * @presenter Color
+  */
+  --mtvaui-primary: #{$primary};
+  --mtvaui-secondary: #{$secondary};
+  --mtvaui-danger: #{$danger};
+  --mtvaui-info: #{$info};
+  --mtvaui-white: #{$white};
+  --mtvaui-white-opacity: #{$white-opacity};
+  --mtvaui-white-150: #{$white-150};
+  --mtvaui-sand: #{$sand};
+  --mtvaui-black: #{$black};
+
+  /**
+  * @tokens Color shades
+  * @presenter Color
+  */
+  --mtvaui-gray-100: #{$gray-100};
+  --mtvaui-gray-150: #{$gray-150};
+  --mtvaui-gray-200: #{$gray-200};
+  --mtvaui-gray-200-opacity: #{$gray-200-opacity};
+  --mtvaui-gray-250: #{$gray-250};
+  --mtvaui-gray-200-rgb: #{red($gray-200)}, #{green($gray-200)},
+    #{blue($gray-200)};
+  --mtvaui-gray-300: #{$gray-300};
+  --mtvaui-gray-400: #{$gray-400};
+  --mtvaui-gray-500: #{$gray-500};
+  --mtvaui-gray-600: #{$gray-600};
+  --mtvaui-gray-800: #{$gray-800};
+  --mtvaui-gray-900: #{$gray-900};
+  --mtvaui-gray-modal-bg: #{$gray-modal-bg};
+
+  --mtvaui-tag-background-blue: #{$tag-background-blue};
+  --mtvaui-tag-background-pink: #{$tag-background-pink};
+  --mtvaui-tag-color-blue: #{$tag-color-blue};
+  --mtvaui-tag-color-pink: #{$tag-color-pink};
+
+  --mtvaui-purple-100: #{$purple-100};
+  --mtvaui-purple-200: #{$purple-200};
+  --mtvaui-purple-200-rgb: #{red($purple-200)}, #{green($purple-200)},
+    #{blue($purple-200)};
+  --mtvaui-purple-200-opacity: #{$purple-200-opacity};
+  --mtvaui-purple-300: #{$purple-300};
+  --mtvaui-purple-400: #{$purple-400};
+  --mtvaui-purple-400-opacity: #{$purple-400-opacity};
+  --mtvaui-purple-500: #{$purple-500};
+  --mtvaui-purple-500-opacity: #{$purple-500-opacity};
+  --mtvaui-purple-600: #{$purple-600};
+
+  --mtvaui-pink-100: #{$pink-100};
+
+  /**
+  * @tokens Colors / Accessibility
+  * @presenter Color
+  */
+  --mtvaui-accessible-fg: #{$accessible-fg};
+  --mtvaui-accessible-bg: #{$accessible-bg};
+
+  --mtvaui-gradient-purple-black-1: linear-gradient(
+    270deg,
+    var(--mtvaui-purple-500) 0%,
+    var(--mtvaui-black) 100%
+  );
+  --mtvaui-gradient-black-purple-1: linear-gradient(
+    270deg,
+    var(--mtvaui-black) 0%,
+    var(--mtvaui-purple-500) 100%
+  );
+  --mtvaui-gradient-purple-black-opacity: linear-gradient(
+    270deg,
+    rgba(121, 40, 141, 0.85) 0%,
+    rgba(0, 0, 0, 0.85) 100%
+  );
+  --mtvaui-gradient-purple-transparent-shade: linear-gradient(
+    270deg,
+    rgba(121, 40, 141, 0.411) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+
+  /**
+  * @tokens Colors / Calendar
+  * @presenter Color
+  */
+  --mtvaui-calendar-green: #{$calendar-green};
+  --mtvaui-calendar-orange: #{$calendar-orange};
+  --mtvaui-calendar-brown: #{$calendar-brown};
+  --mtvaui-calendar-blue: #{$calendar-blue};
+
+  /**
+  * @tokens Colors / Event Listing
+  * @presenter Color
+  */
+  --mtvaui-event-listing-background: #{$event-listing-background};
+  --mtvaui-event-listing-scrollbar-background: #{$event-listing-scrollbar-background};
+  --mtvaui-event-listing-scrollbar-thumb: #{$event-listing-scrollbar-thumb};
+  --mtvaui-event-listing-scrollbar-thumb-hover: #{$event-listing-scrollbar-thumb-hover};
+
+  --mtvaui-hirado-blue-700-opacity: #{$hirado-blue-700-opacity};
+  --mtvaui-hirado-blue-800: #{$hirado-blue-800};
+  --mtvaui-hirado-font-primary: #{$hirado-font-primary};
+  --mtvaui-hirado-blue-700: #{$hirado-blue-700};
+  --mtvaui-hirado-blue-900: #{$hirado-blue-900};
+  --mtvaui-hirado-gray-400: #{$hirado-gray-400};
+  --mtvaui-hirado-gray-800: #{$hirado-gray-800};
+  --mtvaui-hirado-gray-700: #{$hirado-gray-700};
+  --mtvaui-hirado-gray-600: #{$hirado-gray-600};
+  --mtvaui-hirado-green-500: #{$hirado-green-500};
+  --mtvaui-hirado-gray-500: #{$hirado-gray-500};
+  --mtvaui-hirado-dark-mode-fg: #{$hirado-dark-mode-fg};
+  --mtvaui-hirado-dark-mode-bg: #{$hirado-dark-mode-bg};
+  --mtvaui-hirado-accessible-fg: #{$hirado-accessible-fg};
+
+  // M4Sport
+  --m4sport-font-primary: #{$m4sport-font-primary};
+
+  --m4sport-primary: #{$m4sport-primary};
+  --m4sport-secondary: #{$m4sport-secondary};
+  --m4sport-black: #{$m4sport-black};
+  --m4sport-white: #{$m4sport-white};
+
+  --m4sport-gray-100: #{$m4sport-gray-100};
+  --m4sport-gray-200: #{$m4sport-gray-200};
+  --m4sport-gray-300: #{$m4sport-gray-300};
+  --m4sport-gray-500: #{$m4sport-gray-500};
+  --m4sport-gray-800: #{$m4sport-gray-800};
+  --m4sport-gray-900: #{$m4sport-gray-900};
+
+  --m4sport-white-opacity-300: #{$m4sport-white-opacity-300};
+  --m4sport-white-opacity-400: #{$m4sport-white-opacity-400};
+  --m4sport-white-opacity-500: #{$m4sport-white-opacity-500};
+  --m4sport-black-opacity-400: #{$m4sport-black-opacity-400};
+  --m4sport-red-opacity-850: #{$m4sport-red-opacity-850};
+  --m4sport-gray-opacity-008: #{$m4sport-gray-opacity-008};
+
+  --m4sport-gradient-red: linear-gradient(
+    90deg,
+    var(--m4sport-secondary) 0%,
+    var(--m4sport-primary) 100%
+  );
+
+  --danger-color: #{$danger-color};
+  --danger-border: #{$danger-border};
+}

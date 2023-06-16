@@ -1,0 +1,42 @@
+@use '../../abstracts/mixins' as *;
+
+.mat-select-panel {
+  .accessible-theme &,
+  .accessible-theme & .mat-selected,
+  .accessible-theme & .mat-active {
+    @include highcontrast;
+    border: 2px solid var(--mtvaui-accessible-fg);
+  }
+
+  .hirado-accessible-theme &,
+  .hirado-accessible-theme & .mat-selected,
+  .hirado-accessible-theme & .mat-active {
+    @include hirado-highcontrast;
+    border: 2px solid var(--mtvaui-hirado-accessible-fg);
+  }
+
+  .hirado-dark-mode-theme &,
+  .hirado-dark-mode-theme & .mat-selected,
+  .hirado-dark-mode-theme & .mat-active {
+    @include hirado-dark-mode;
+    border: 2px solid var(--mtvaui-hirado-dark-mode-fg);
+  }
+}
+
+.accessible-theme {
+  .mat-select-arrow {
+    @include highcontrast;
+  }
+}
+
+.hirado-accessible-theme {
+  .mat-select-arrow {
+    @include hirado-highcontrast;
+  }
+}
+
+.hirado-dark-mode-theme {
+  .mat-select-arrow {
+    @include hirado-dark-mode;
+  }
+}

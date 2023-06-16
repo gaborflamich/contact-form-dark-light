@@ -1,24 +1,32 @@
-@use '../abstracts/mixins' as *;
+@use "../abstracts/mixins" as *;
 
-// Global icons
-*[class*='icon-'] {
-  &.address {
-    @include icon('icon-address.svg');
+// Global base
+*[class*="icon-"] {
+  &.icon-sun {
+    @include icon("/icons/icon-sun.svg");
   }
-  &.envelope {
-    @include icon('icon-envelope.svg');
+  &.icon-moon {
+    @include icon("/icons/icon-moon.svg");
   }
-  &.inbox {
-    @include icon('icon-inbox.svg');
+  &.icon-address {
+    @include icon("/icons/icon-address.svg");
   }
-  &.moon {
-    @include icon('icon-moon.svg');
+  &.icon-envelope {
+    @include icon("/icons/icon-envelope.svg");
   }
-  &.paperclip {
-    @include icon('icon-paperclip.svg');
+  &.icon-inbox {
+    @include icon("/icons/icon-inbox.svg");
   }
-  &.sun {
-    @include icon('icon-sun.svg');
+  &.icon-paperclip {
+    @include icon("/icons/icon-paperclip.svg");
   }
-
+  &.icon-paperplane {
+    @include icon("/icons/icon-paperplane.svg");
+  }
+  &.logo-light {
+    @include icon("/logo-light.svg");
+  }
+  &.logo-dark {
+    @include icon("/logo-dark.svg");
+  }
 }

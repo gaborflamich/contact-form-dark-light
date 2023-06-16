@@ -5,20 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ContactFormComponent } from './components/contact-form/contact-form.component';
 import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
+import { LibModule } from './modules/lib.module';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { EmailService } from './services/email.service';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    ContactFormComponent,
-    HeaderComponent,
-    FooterComponent
-  ],
+  declarations: [AppComponent, ContactFormComponent, HeaderComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    LibModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [EmailService],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

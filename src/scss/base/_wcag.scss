@@ -1,0 +1,60 @@
+@use '../abstracts/mixins' as *;
+
+.accessible-theme {
+  @include highcontrast;
+  background: var(--mtvaui-accessible-bg) !important;
+
+  &::ng-deep {
+    button {
+      @include highcontrast;
+    }
+  }
+
+  .mat-select-panel {
+    @include highcontrast;
+
+    .mat-option {
+      @include highcontrast;
+      &.mat-active {
+      }
+    }
+  }
+}
+
+.hirado-accessible-theme {
+  @include hirado-highcontrast;
+  background: var(--mtvaui-accessible-bg) !important;
+
+  &::ng-deep {
+    button {
+      @include hirado-highcontrast;
+    }
+  }
+
+  .mat-select-panel {
+    @include hirado-highcontrast;
+
+    .mat-option {
+      @include hirado-highcontrast;
+    }
+  }
+}
+
+.hirado-dark-mode-theme {
+  @include hirado-dark-mode;
+  background: var(--mtvaui-hirado-dark-mode-bg) !important;
+
+  &::ng-deep {
+    button {
+      @include hirado-dark-mode;
+    }
+  }
+
+  .mat-select-panel {
+    @include hirado-dark-mode;
+
+    .mat-option {
+      @include hirado-dark-mode;
+    }
+  }
+}

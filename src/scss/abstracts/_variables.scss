@@ -1,0 +1,126 @@
+// Images path
+$images-path: "../../assets/images";
+
+// Wrapper width
+$global-wrapper-width: 1400px !default;
+$global-margin: 30px !default;
+
+// Font Family
+$font-primary: "Proxima", serif !default;
+$font-secondary: "ProximaAlt", serif !default;
+
+// Colors
+$gray-100: #f8f6f3 !default; // $grey-light-1; BS: #f8f9fa
+$gray-150: #eeeeee !default; // $grey-22;
+$gray-200: #e8e2d6 !default; //
+$gray-200-opacity: rgba(#e8e2d6, 0.3);
+$gray-250: #f2eaf4 !default;
+$gray-300: #dee2e6 !default;
+$gray-400: #ced4da !default;
+$gray-500: #adb5bd !default;
+$gray-600: #6c757d !default;
+$gray-700: #495057 !default;
+$gray-800: #343a40 !default;
+$gray-900: #222222 !default; // $black-2; BS: #212529
+$gray-modal-bg: #525252 !default;
+
+$purple-100: #f5f1f6; // $purple-4; BS: #e2d9f3
+$purple-200: #d4c0d8; // $purple-3; BS: #c5b3e6
+$purple-200-opacity: #f2ecf3; // Default purple-200 with 0.3 opacity
+
+$purple-300: #a98eda;
+$purple-400: #9c6fa4; // $purple; BS: #8c68cd
+$purple-400-opacity: rgba(#9c6fa4, 0.8); // $purple 400 opacity
+$purple-500: #79288d; // $purple-2; BS: #6f42c1;
+$purple-500-opacity: #8d489d; // $purple-4; BS: #e2d9f3
+$purple-600: #5f2469; // $hc-purple; BS: #59359a;
+$purple-700: #432874;
+
+$pink-100: #fcc8d6;
+
+$white: #fff !default;
+$white-opacity: #ffffff40 !default;
+$white-150: rgba(#ffffff, 0.15) !default;
+$black: #000 !default;
+
+// Tag colors
+$tag-background-blue: #dee2ff !default;
+$tag-background-pink: #ff9bb980 !default;
+$tag-color-blue: #5c6dff !default;
+$tag-color-pink: #dd275d !default;
+
+$primary: #007bff !default;
+$secondary: #6c757d !default;
+$success: #28a745 !default;
+$danger: #dc3545 !default;
+$warning: #ffc107 !default;
+$info: #17a2b8 !default;
+
+$red: #a80046;
+$yellow: yellow;
+$orange: orange;
+$sand: #f8f7f6;
+
+// Colors high contrast
+$hc-purple: #5f2469;
+
+$accessible-bg: $black;
+$accessible-fg: $yellow;
+
+$transition: 0.3s ease all;
+
+// Calendar colors
+$calendar-green: #21e49e;
+$calendar-orange: #d84b20;
+$calendar-brown: #382c1e;
+$calendar-blue: #4977eb;
+
+// Event listing colors
+$event-listing-background: #f9f6f9;
+$event-listing-scrollbar-background: rgba(212, 192, 216, 0.5);
+$event-listing-scrollbar-thumb: rgba(156, 111, 164, 0.5);
+$event-listing-scrollbar-thumb-hover: rgb(156, 111, 164);
+
+// Hirado colors
+$hirado-blue-700: #2843c9;
+$hirado-blue-700: #2843c9;
+$hirado-blue-700-opacity: #2843c9cc;
+$hirado-blue-800: #1e3297;
+$hirado-blue-900: #101d5c;
+$hirado-gray-400: #f4f4f4;
+$hirado-gray-500: #dedede;
+$hirado-gray-800: #333333;
+$hirado-gray-700: #999999;
+$hirado-gray-500: #dedede;
+$hirado-dark-mode-bg: #04102f;
+$hirado-dark-mode-fg: $white;
+$hirado-accessible-fg: $white;
+$hirado-gray-600: #232323;
+$hirado-green-500: #4daa56;
+
+// Hirado fonts
+$hirado-font-primary: "Nunito Sans" !default;
+
+// M4Sport
+
+$m4sport-font-primary: "Nunito Sans" !default;
+
+$m4sport-primary: #a7261d;
+$m4sport-secondary: #430905;
+
+$m4sport-black: #000000;
+$m4sport-white: #ffffff;
+
+$m4sport-gray-100: #f2f2f2;
+$m4sport-gray-200: #eeeeee;
+$m4sport-gray-300: #dddddd;
+$m4sport-gray-500: #9d9d9d;
+$m4sport-gray-800: #222222;
+$m4sport-gray-900: #111111;
+
+$m4sport-white-opacity-300: rgba(#ffffff, 0.3);
+$m4sport-white-opacity-400: rgba(#ffffff, 0.4);
+$m4sport-white-opacity-500: rgba(#ffffff, 0.5);
+$m4sport-black-opacity-400: rgba(#222222, 0.4);
+$m4sport-red-opacity-850: rgba($m4sport-primary, 0.85);
+$m4sport-gray-opacity-008: rgba($m4sport-gray-800, 0.08);

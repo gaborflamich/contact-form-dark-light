@@ -1,0 +1,86 @@
+@use '../abstracts/mixins' as *;
+
+.button {
+  display: inline-block;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  letter-spacing: 1px;
+  color: var(--mtvaui-white);
+  border: 1px solid var(--mtvaui-purple-400);
+  padding: 10px 20px;
+  transition: 0.5s ease all;
+  position: relative;
+  cursor: pointer;
+
+  .accessible-theme & {
+    @include highcontrast;
+    @include highcontrastBorder(1px);
+    border-color: var(--mtvaui-accessible-fg);
+  }
+
+  .icon {
+    width: 13px;
+    height: 13px;
+    margin-bottom: -1.5px;
+  }
+
+  &.icon-on-right .icon {
+    margin-left: 7px;
+  }
+  &.icon-on-left .icon {
+    margin-right: 7px;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    background-color: var(--mtvaui-gray-300);
+    border: 1px solid var(--mtvaui-gray-300);
+  }
+
+  &:before,
+  &:after {
+    width: 100%;
+    position: absolute;
+    background: var(--mtvaui-purple-400);
+    .accessible-theme & {
+      background: var(--mtvaui-accessible-fg);
+    }
+    height: 4px;
+    content: ' ';
+    display: block;
+    transform: scale(0);
+    transition: 0.15s ease all;
+
+    &:disabled {
+      background-color: var(--mtvaui-gray-300);
+    }
+  }
+
+  &:before {
+    top: 0;
+    left: 0;
+    transform-origin: left top;
+  }
+
+  &:after {
+    transform-origin: right bottom;
+    right: 0;
+    bottom: 0;
+  }
+
+  &:enabled {
+    &:hover,
+    &:focus {
+      background-color: var(--mtvaui-purple-400);
+
+      &:after,
+      &:before {
+        transform: scale(1);
+      }
+    }
+  }
+
+  &.black {
+    color: var(--mtvaui-black);
+  }
+}

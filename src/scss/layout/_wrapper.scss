@@ -1,0 +1,14 @@
+@import '../abstracts/variables';
+
+// Global wrapper
+section,
+header,
+footer,
+nav,
+article {
+  > .wrapper {
+    width: $global-wrapper-width;
+    margin: 0 auto;
+    max-width: calc(100% - #{$global-margin});
+  }
+}

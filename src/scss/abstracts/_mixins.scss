@@ -1,0 +1,129 @@
+@use 'variables' as *;
+@use 'sass:math' as Math;
+
+// Vertical center
+%center-vertically {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+// Display block icon
+@mixin icon($name) {
+  display: inline-block;
+  min-width: 20px;
+  min-height: 20px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-image: url($images-path + $name);
+}
+
+// Background image
+@mixin img($file) {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url($images-path + $file);
+}
+
+// IE10 IE11 only
+@mixin ieonly() {
+  @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+    @content;
+  }
+}
+
+// Firefox only
+@mixin ffonly() {
+  @-moz-document url-prefix() {
+    @content;
+  }
+}
+
+// DOM element with fixed ratio - 100% width
+%imgRatio {
+  display: block;
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: var(--mtvaui-gray-500);
+}
+
+@mixin imgRatio($x, $y) {
+  @extend %imgRatio;
+  padding-top: Math.div($y, $x) * 100%;
+}
+
+@mixin highcontrast {
+  background-color: var(--mtvaui-accessible-bg) !important;
+  background: var(--mtvaui-accessible-bg) !important;
+  color: var(--mtvaui-accessible-fg) !important;
+  &::ng-deep {
+    background-color: var(--mtvaui-accessible-bg) !important;
+    background: var(--mtvaui-accessible-bg) !important;
+    color: var(--mtvaui-accessible-fg) !important;
+  }
+}
+
+@mixin hirado-highcontrast {
+  background-color: var(--mtvaui-accessible-bg) !important;
+  background: var(--mtvaui-accessible-bg) !important;
+  color: var(--mtvaui-hirado-accessible-fg) !important;
+  &::ng-deep {
+    background-color: var(--mtvaui-accessible-bg) !important;
+    background: var(--mtvaui-accessible-bg) !important;
+    color: var(--mtvaui-hirado-accessible-fg) !important;
+  }
+}
+
+@mixin hirado-dark-mode {
+  background-color: var(--mtvaui-hirado-dark-mode-bg) !important;
+  background: var(--mtvaui-hirado-dark-mode-bg) !important;
+  color: var(--mtvaui-hirado-dark-mode-fg) !important;
+  &::ng-deep {
+    background-color: var(--mtvaui-hirado-dark-mode-bg) !important;
+    background: var(--mtvaui-hirado-dark-mode-bg) !important;
+    color: var(--mtvaui-hirado-dark-mode-fg) !important;
+  }
+}
+
+@mixin highcontrastBorder($borderSize: 2px, $borderStyle: solid) {
+  &,
+  &::ng-deep {
+    border-style: $borderStyle;
+    @if ($borderSize) {
+      border-width: $borderSize !important;
+    }
+
+    border-color: var(--mtvaui-accessible-fg) !important;
+  }
+}
+
+@mixin mtva-make-container($max-width: 100%, $padding-x: 20px) {
+  width: 100%;
+  max-width: $max-width;
+  padding: 0;
+  margin: 0 auto;
+}
+
+@mixin border-bottom-on-hover{
+  position: relative;
+  &:after{
+    position: absolute;
+    content: "";
+    bottom: -5px;
+    height: 2px;
+    width: 100%;
+    background: var(--m4sport-white);
+    left: 0;
+    transform: scale(0);
+    transition: .4s ease;
+    display: block;
+    margin: auto;
+  }
+  &:hover:after{
+    transform: scale(1);
+  }
+}
